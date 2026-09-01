@@ -23,8 +23,9 @@ class EchoTest extends AnyFunSuite:
     assert((new DoubleEcho).echo("hello") == "hello hello")
 
   test("A simple echo inside a list should still echo an empty argument"):
-    val echos = List(new SimpleEcho)
-    val result = echos(1).echo("")
+    val echos = List(new SimpleEcho) 
+//Change the 1 to a 0 for correct indexing
+    val result = echos(0).echo("")
     assert(result == "")
 
   test("A simple echo inside a list used wrong should throw an index-out-of-bounds exception"):

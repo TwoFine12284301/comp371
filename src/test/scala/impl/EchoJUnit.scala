@@ -34,7 +34,8 @@ class EchoJUnit:
   @Test
   def testSimpleUsingList: Unit =
     val echos = List(new SimpleEcho)
-    val result = echos(1).echo("")
+//Change 1 to 0
+    val result = echos(0).echo("")
     assertEquals("", result)
 
   @Test
